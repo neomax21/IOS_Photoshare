@@ -6,5 +6,7 @@ target 'Photoshare' do
   use_frameworks!
 
   # Pods for Photoshare
+  pod 'Firebase'
+  pod 'Firebase/Auth'
   pod 'Firebase/Core'
 end
