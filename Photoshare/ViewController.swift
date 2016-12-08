@@ -28,26 +28,41 @@ class ViewController: UIViewController {
 
     @IBAction func LoginButton(_ sender: Any) {
         if Email_field.text! == "" || PW_field.text! == "" {
-            let alertController = UIAlertController(title: "Login Failed!", message:
+            // if one or both fields are empty, shows a warning
+            let alert1 = UIAlertController(title: "Login Failed!", message:
                 "Please check you entered both E-Mail and Password.", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
+            alert1.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
             
-            self.present(alertController, animated: true, completion: nil)
+            self.present(alert1, animated: true, completion: nil)
         }
         else {
+            // tries to log in
             FIRAuth.auth()?.signIn(withEmail: Email_field.text!, password:  PW_field.text!, completion: {
                 user, error in
             
                 if error != nil {
-                    print(error.debugDescription)
+                    let alert2 = UIAlertController(title: "Login Failed!", message:
+                        "Email or Password incorrect!", preferredStyle: UIAlertControllerStyle.alert)
+                    alert2.addAction(UIAlertAction(title: "Retry", style: UIAlertActionStyle.default,handler: nil))
+                    
+                    self.present(alert2, animated: true, completion: nil)
+                    // debugger console
+                    print("::[DEBUGGER]:: LOGIN FAILED!")
+                    
                 } else {
+                    // if logged in shows next view
+                    self.performSegue(withIdentifier: "LoggedIN", sender: self)
+                    // debugger console
                     print("::[DEBUGGER]:: LOGIN SUCCESSFUL!")
                 }
             })
         }
     }
     @IBAction func CreateButton(_ sender: Any) {
-        
+        // loads register view
+        self.performSegue(withIdentifier: "RegisterSegue", sender: self)
+        // debugger console
+        print("::[DEBUGGER]:: HIT REGISTER BUTTON")
     }
 
 }

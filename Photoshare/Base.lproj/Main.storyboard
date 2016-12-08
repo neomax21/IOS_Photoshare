@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--INIT-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Photoshare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="INIT" id="BYZ-38-t0r" customClass="ViewController" customModule="Photoshare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -63,39 +63,84 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Photoshare" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvw-LJ-fwT">
-                                <rect key="frame" x="16" y="108" width="343" height="50"/>
-                                <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photoshare" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oW-Ye-2rh">
+                                <rect key="frame" x="16" y="68" width="343" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="highlightedColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="v1.0 - 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Eg-YF-Sy1">
+                                <rect key="frame" x="16" y="646" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.55072053108808294" blue="0.11849524011885128" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.11888141185045242" green="0.55111604928970337" blue="0.11858934909105301" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fll-Nj-0Al" firstAttribute="top" secondItem="z4l-Bo-wiM" secondAttribute="bottom" constant="8" id="17F-2X-HFo"/>
                             <constraint firstAttribute="leadingMargin" secondItem="SFj-hR-dYy" secondAttribute="leading" id="3Uw-30-BTC"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="0Eg-YF-Sy1" secondAttribute="leading" id="Ma9-iH-V1b"/>
                             <constraint firstItem="SFj-hR-dYy" firstAttribute="top" secondItem="47E-uC-VRM" secondAttribute="bottom" constant="8" id="RdY-mN-rAi"/>
-                            <constraint firstItem="47E-uC-VRM" firstAttribute="top" secondItem="Hvw-LJ-fwT" secondAttribute="bottom" constant="122" id="Si0-sd-KcD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="47E-uC-VRM" secondAttribute="trailing" id="WJA-ND-n03"/>
+                            <constraint firstItem="0Eg-YF-Sy1" firstAttribute="top" secondItem="fll-Nj-0Al" secondAttribute="bottom" constant="222" id="Y1w-Kk-u0b"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SFj-hR-dYy" secondAttribute="trailing" id="bsf-I0-b07"/>
                             <constraint firstItem="z4l-Bo-wiM" firstAttribute="centerX" secondItem="SFj-hR-dYy" secondAttribute="centerX" id="ctK-0r-TUN"/>
                             <constraint firstItem="SFj-hR-dYy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="h6p-N0-GR7"/>
                             <constraint firstItem="fll-Nj-0Al" firstAttribute="centerX" secondItem="z4l-Bo-wiM" secondAttribute="centerX" id="lhc-X5-q8o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Eg-YF-Sy1" secondAttribute="trailing" id="nxU-h6-ghy"/>
                             <constraint firstItem="z4l-Bo-wiM" firstAttribute="top" secondItem="SFj-hR-dYy" secondAttribute="bottom" constant="8" id="rRs-b9-Qs8"/>
                             <constraint firstItem="SFj-hR-dYy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uLk-iO-g92"/>
                             <constraint firstAttribute="leadingMargin" secondItem="47E-uC-VRM" secondAttribute="leading" id="uzR-4I-o3T"/>
-                            <constraint firstItem="Hvw-LJ-fwT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zzZ-nM-jOc"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="Email_field" destination="47E-uC-VRM" id="1w1-68-Kqe"/>
                         <outlet property="PW_field" destination="SFj-hR-dYy" id="pOv-Iz-oHv"/>
+                        <segue destination="216-Ud-kdo" kind="showDetail" identifier="LoggedIN" id="PTE-9o-3H6"/>
+                        <segue destination="c8U-TK-CYA" kind="showDetail" identifier="RegisterSegue" id="OxV-bE-RcH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+            <point key="canvasLocation" x="-786.39999999999998" y="174.96251874062969"/>
+        </scene>
+        <!--LoggedInHome-->
+        <scene sceneID="QsL-Td-nYV">
+            <objects>
+                <viewController title="LoggedInHome" id="216-Ud-kdo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cTB-og-C1d"/>
+                        <viewControllerLayoutGuide type="bottom" id="tky-AH-gfk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Aog-xL-UJ0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.1188814119" green="0.55111604930000002" blue="0.1185893491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B7q-lR-heS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95" y="-223"/>
+        </scene>
+        <!--RegisterView-->
+        <scene sceneID="OOR-KL-EeO">
+            <objects>
+                <viewController title="RegisterView" id="c8U-TK-CYA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="32T-dv-8DZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Te0-3d-sHw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UME-Wi-R5I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.1188814119" green="0.55111604930000002" blue="0.1185893491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bfA-MG-Tha" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95" y="665"/>
         </scene>
     </scenes>
 </document>
