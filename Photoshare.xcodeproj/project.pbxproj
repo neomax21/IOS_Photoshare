@@ -13,6 +13,8 @@
 		CE052C1C1DF6CD4100205CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE052C1B1DF6CD4100205CEA /* Assets.xcassets */; };
 		CE052C1F1DF6CD4100205CEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE052C1D1DF6CD4100205CEA /* LaunchScreen.storyboard */; };
 		CE14650C1DF6D16200C3C803 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE14650B1DF6D16200C3C803 /* GoogleService-Info.plist */; };
+		CEDDAAEC1DFA48EF00E6F9E3 /* Camera and pointer.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDDAAEB1DFA48EF00E6F9E3 /* Camera and pointer.png */; };
+		CEDDAAEE1DFA525400E6F9E3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDAAED1DFA525400E6F9E3 /* RegisterViewController.swift */; };
 		EFC1822FE7E7123ADE9B3B7C /* Pods_Photoshare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F312B896D3EC547CB6FC0582 /* Pods_Photoshare.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		CE052C201DF6CD4100205CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE14650B1DF6D16200C3C803 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE15AA171DF881D700DEEAA3 /* Photoshare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Photoshare.entitlements; sourceTree = "<group>"; };
+		CEDDAAEB1DFA48EF00E6F9E3 /* Camera and pointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Camera and pointer.png"; sourceTree = "<group>"; };
+		CEDDAAED1DFA525400E6F9E3 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F312B896D3EC547CB6FC0582 /* Pods_Photoshare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Photoshare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA0C806CAB09B2B8738C75F /* Pods-Photoshare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photoshare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Photoshare/Pods-Photoshare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,10 +81,12 @@
 				CE052C141DF6CD4100205CEA /* AppDelegate.swift */,
 				CE052C161DF6CD4100205CEA /* ViewController.swift */,
 				CE052C181DF6CD4100205CEA /* Main.storyboard */,
+				CEDDAAEB1DFA48EF00E6F9E3 /* Camera and pointer.png */,
 				CE052C1B1DF6CD4100205CEA /* Assets.xcassets */,
 				CE052C1D1DF6CD4100205CEA /* LaunchScreen.storyboard */,
 				CE052C201DF6CD4100205CEA /* Info.plist */,
 				CE14650B1DF6D16200C3C803 /* GoogleService-Info.plist */,
+				CEDDAAED1DFA525400E6F9E3 /* RegisterViewController.swift */,
 			);
 			path = Photoshare;
 			sourceTree = "<group>";
@@ -165,6 +171,7 @@
 				CE14650C1DF6D16200C3C803 /* GoogleService-Info.plist in Resources */,
 				CE052C1C1DF6CD4100205CEA /* Assets.xcassets in Resources */,
 				CE052C1A1DF6CD4100205CEA /* Main.storyboard in Resources */,
+				CEDDAAEC1DFA48EF00E6F9E3 /* Camera and pointer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDDAAEE1DFA525400E6F9E3 /* RegisterViewController.swift in Sources */,
 				CE052C171DF6CD4100205CEA /* ViewController.swift in Sources */,
 				CE052C151DF6CD4100205CEA /* AppDelegate.swift in Sources */,
 			);

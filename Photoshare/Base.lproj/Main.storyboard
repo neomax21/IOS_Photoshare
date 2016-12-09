@@ -63,9 +63,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photoshare" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oW-Ye-2rh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Photoshare" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oW-Ye-2rh">
                                 <rect key="frame" x="16" y="68" width="343" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -76,11 +75,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Camera and pointer.png" translatesAutoresizingMaskIntoConstraints="NO" id="c4s-ns-29X">
+                                <rect key="frame" x="123" y="135" width="128" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.11888141185045242" green="0.55111604928970337" blue="0.11858934909105301" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fll-Nj-0Al" firstAttribute="top" secondItem="z4l-Bo-wiM" secondAttribute="bottom" constant="8" id="17F-2X-HFo"/>
                             <constraint firstAttribute="leadingMargin" secondItem="SFj-hR-dYy" secondAttribute="leading" id="3Uw-30-BTC"/>
+                            <constraint firstItem="c4s-ns-29X" firstAttribute="top" secondItem="8oW-Ye-2rh" secondAttribute="bottom" constant="8" id="60C-4m-dat"/>
+                            <constraint firstItem="47E-uC-VRM" firstAttribute="top" secondItem="c4s-ns-29X" secondAttribute="bottom" constant="17" id="6Tc-io-4F2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8oW-Ye-2rh" secondAttribute="trailing" id="B0R-Cn-e4X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c4s-ns-29X" secondAttribute="trailing" constant="108" id="BAU-AM-CKn"/>
                             <constraint firstAttribute="leadingMargin" secondItem="0Eg-YF-Sy1" secondAttribute="leading" id="Ma9-iH-V1b"/>
                             <constraint firstItem="SFj-hR-dYy" firstAttribute="top" secondItem="47E-uC-VRM" secondAttribute="bottom" constant="8" id="RdY-mN-rAi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="47E-uC-VRM" secondAttribute="trailing" id="WJA-ND-n03"/>
@@ -89,17 +95,19 @@
                             <constraint firstItem="z4l-Bo-wiM" firstAttribute="centerX" secondItem="SFj-hR-dYy" secondAttribute="centerX" id="ctK-0r-TUN"/>
                             <constraint firstItem="SFj-hR-dYy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="h6p-N0-GR7"/>
                             <constraint firstItem="fll-Nj-0Al" firstAttribute="centerX" secondItem="z4l-Bo-wiM" secondAttribute="centerX" id="lhc-X5-q8o"/>
+                            <constraint firstItem="c4s-ns-29X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="107" id="mCz-hY-n4t"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0Eg-YF-Sy1" secondAttribute="trailing" id="nxU-h6-ghy"/>
                             <constraint firstItem="z4l-Bo-wiM" firstAttribute="top" secondItem="SFj-hR-dYy" secondAttribute="bottom" constant="8" id="rRs-b9-Qs8"/>
                             <constraint firstItem="SFj-hR-dYy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uLk-iO-g92"/>
                             <constraint firstAttribute="leadingMargin" secondItem="47E-uC-VRM" secondAttribute="leading" id="uzR-4I-o3T"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="8oW-Ye-2rh" secondAttribute="leading" id="x0R-Gb-tiH"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="Email_field" destination="47E-uC-VRM" id="1w1-68-Kqe"/>
                         <outlet property="PW_field" destination="SFj-hR-dYy" id="pOv-Iz-oHv"/>
-                        <segue destination="216-Ud-kdo" kind="showDetail" identifier="LoggedIN" id="PTE-9o-3H6"/>
-                        <segue destination="c8U-TK-CYA" kind="showDetail" identifier="RegisterSegue" id="OxV-bE-RcH"/>
+                        <segue destination="216-Ud-kdo" kind="show" identifier="LoggedIN" action="showDetailViewController:sender:" id="PTE-9o-3H6"/>
+                        <segue destination="c8U-TK-CYA" kind="show" identifier="RegisterSegue" id="OxV-bE-RcH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -127,7 +135,7 @@
         <!--RegisterView-->
         <scene sceneID="OOR-KL-EeO">
             <objects>
-                <viewController title="RegisterView" id="c8U-TK-CYA" sceneMemberID="viewController">
+                <viewController title="RegisterView" id="c8U-TK-CYA" customClass="RegisterViewController" customModule="Photoshare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="32T-dv-8DZ"/>
                         <viewControllerLayoutGuide type="bottom" id="Te0-3d-sHw"/>
@@ -135,12 +143,77 @@
                     <view key="view" contentMode="scaleToFill" id="UME-Wi-R5I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGs-B4-4Y8">
+                                <rect key="frame" x="115" y="28" width="144" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jmV-YM-BK6">
+                                <rect key="frame" x="16" y="248" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OwX-LG-DR5">
+                                <rect key="frame" x="16" y="297" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Jb-oI-pfy">
+                                <rect key="frame" x="16" y="345" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aVJ-69-nA0">
+                                <rect key="frame" x="16" y="396" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXx-7R-hXA">
+                                <rect key="frame" x="133" y="456" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Camera and pointer.png" translatesAutoresizingMaskIntoConstraints="NO" id="v3d-wZ-g7h">
+                                <rect key="frame" x="123" y="105" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="v1.0 - 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lja-V1-GOi">
+                                <rect key="frame" x="16" y="638" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.1188814119" green="0.55111604930000002" blue="0.1185893491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="Emaill_field" destination="OwX-LG-DR5" id="zXC-bY-rqX"/>
+                        <outlet property="Name_field" destination="jmV-YM-BK6" id="3XF-vd-Mzl"/>
+                        <outlet property="PWCheck_field" destination="aVJ-69-nA0" id="Wul-Hh-Nnb"/>
+                        <outlet property="PW_field" destination="2Jb-oI-pfy" id="pBU-FP-Aoi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfA-MG-Tha" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="95" y="665"/>
+            <point key="canvasLocation" x="93.599999999999994" y="664.31784107946032"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Camera and pointer.png" width="512" height="512"/>
+    </resources>
 </document>
