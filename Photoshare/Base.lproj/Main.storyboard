@@ -13,7 +13,7 @@
         <!--INIT-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="INIT" id="BYZ-38-t0r" customClass="ViewController" customModule="Photoshare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="INITView" title="INIT" id="BYZ-38-t0r" customClass="ViewController" customModule="Photoshare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -114,36 +114,80 @@
                     <connections>
                         <outlet property="Email_field" destination="47E-uC-VRM" id="1w1-68-Kqe"/>
                         <outlet property="PW_field" destination="SFj-hR-dYy" id="pOv-Iz-oHv"/>
-                        <segue destination="216-Ud-kdo" kind="show" identifier="LoggedIN" action="showDetailViewController:sender:" id="PTE-9o-3H6"/>
                         <segue destination="c8U-TK-CYA" kind="show" identifier="RegisterSegue" id="OxV-bE-RcH"/>
+                        <segue destination="6d6-d9-qn1" kind="show" identifier="LoggedIN" id="7u6-fo-fEd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-786.39999999999998" y="174.96251874062969"/>
+            <point key="canvasLocation" x="-825" y="198"/>
         </scene>
-        <!--LoggedInHome-->
-        <scene sceneID="QsL-Td-nYV">
+        <!--PageViewController-->
+        <scene sceneID="sDa-yn-dIr">
             <objects>
-                <viewController title="LoggedInHome" id="216-Ud-kdo" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="PageView" autoresizesArchivedViewToFullSize="NO" title="PageViewController" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="6d6-d9-qn1" customClass="PageViewController" customModule="Photoshare" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1at-SA-W0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199" y="288"/>
+        </scene>
+        <!--OptionsView-->
+        <scene sceneID="lxc-Fs-FmG">
+            <objects>
+                <viewController storyboardIdentifier="OptionsView" title="OptionsView" id="uGx-zg-FjG" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cTB-og-C1d"/>
-                        <viewControllerLayoutGuide type="bottom" id="tky-AH-gfk"/>
+                        <viewControllerLayoutGuide type="top" id="r3m-J2-A3u"/>
+                        <viewControllerLayoutGuide type="bottom" id="rhO-3a-cjp"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Aog-xL-UJ0">
+                    <view key="view" contentMode="scaleToFill" id="Gxg-Vf-4Mg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.1188814119" green="0.55111604930000002" blue="0.1185893491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.71451991579999996" green="0.01421286605" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B7q-lR-heS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i8I-89-kBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="579"/>
+            <point key="canvasLocation" x="902" y="931"/>
+        </scene>
+        <!--MapView-->
+        <scene sceneID="Mcd-Sf-XNm">
+            <objects>
+                <viewController storyboardIdentifier="MapView" title="MapView" id="aZT-de-S2Z" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VcI-BM-hAY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jch-42-k3T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LCS-VF-cHG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JDm-ls-QpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="198" y="931"/>
+        </scene>
+        <!--CameraView-->
+        <scene sceneID="Jwl-8h-19E">
+            <objects>
+                <viewController storyboardIdentifier="CameraView" title="CameraView" id="mOP-BB-7ka" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YQN-Rz-ube"/>
+                        <viewControllerLayoutGuide type="bottom" id="kqS-bB-hhZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ncK-mr-nEP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJN-QP-bmZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-487" y="931"/>
         </scene>
         <!--RegisterView-->
         <scene sceneID="OOR-KL-EeO">
             <objects>
-                <viewController title="RegisterView" id="c8U-TK-CYA" customClass="RegisterViewController" customModule="Photoshare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterView" title="RegisterView" id="c8U-TK-CYA" customClass="RegisterViewController" customModule="Photoshare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="32T-dv-8DZ"/>
                         <viewControllerLayoutGuide type="bottom" id="Te0-3d-sHw"/>
@@ -254,7 +298,7 @@
                         <outlet property="PW_field" destination="joQ-QW-PdI" id="Av7-Nj-8Ap"/>
                         <outlet property="PWcheck_field" destination="MFU-iZ-Uha" id="muo-x0-z4B"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="CancelSegue" id="gau-Sg-63l"/>
-                        <segue destination="216-Ud-kdo" kind="show" identifier="AfterRegisterSegue" id="luU-hs-VEN"/>
+                        <segue destination="6d6-d9-qn1" kind="show" identifier="RegisterSegue" id="fPJ-OI-tn6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfA-MG-Tha" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -266,7 +310,7 @@
         <image name="Camera and pointer.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="luU-hs-VEN"/>
+        <segue reference="7u6-fo-fEd"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.9797222069" green="1" blue="0.96504627679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

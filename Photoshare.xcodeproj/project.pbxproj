@@ -13,6 +13,8 @@
 		CE052C1C1DF6CD4100205CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE052C1B1DF6CD4100205CEA /* Assets.xcassets */; };
 		CE052C1F1DF6CD4100205CEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE052C1D1DF6CD4100205CEA /* LaunchScreen.storyboard */; };
 		CE14650C1DF6D16200C3C803 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE14650B1DF6D16200C3C803 /* GoogleService-Info.plist */; };
+		CE6566841DFC8E4E007F494F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6566831DFC8E4E007F494F /* MapKit.framework */; };
+		CE6566881DFF04A0007F494F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6566871DFF04A0007F494F /* PageViewController.swift */; };
 		CEDDAAEC1DFA48EF00E6F9E3 /* Camera and pointer.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDDAAEB1DFA48EF00E6F9E3 /* Camera and pointer.png */; };
 		CEDDAAEE1DFA525400E6F9E3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDAAED1DFA525400E6F9E3 /* RegisterViewController.swift */; };
 		EFC1822FE7E7123ADE9B3B7C /* Pods_Photoshare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F312B896D3EC547CB6FC0582 /* Pods_Photoshare.framework */; };
@@ -29,6 +31,8 @@
 		CE052C201DF6CD4100205CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE14650B1DF6D16200C3C803 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE15AA171DF881D700DEEAA3 /* Photoshare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Photoshare.entitlements; sourceTree = "<group>"; };
+		CE6566831DFC8E4E007F494F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CE6566871DFF04A0007F494F /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		CEDDAAEB1DFA48EF00E6F9E3 /* Camera and pointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Camera and pointer.png"; sourceTree = "<group>"; };
 		CEDDAAED1DFA525400E6F9E3 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F312B896D3EC547CB6FC0582 /* Pods_Photoshare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Photoshare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6566841DFC8E4E007F494F /* MapKit.framework in Frameworks */,
 				EFC1822FE7E7123ADE9B3B7C /* Pods_Photoshare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +92,7 @@
 				CE052C201DF6CD4100205CEA /* Info.plist */,
 				CE14650B1DF6D16200C3C803 /* GoogleService-Info.plist */,
 				CEDDAAED1DFA525400E6F9E3 /* RegisterViewController.swift */,
+				CE6566871DFF04A0007F494F /* PageViewController.swift */,
 			);
 			path = Photoshare;
 			sourceTree = "<group>";
@@ -94,6 +100,7 @@
 		D0ABF19B4BB062502DB00ED7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE6566831DFC8E4E007F494F /* MapKit.framework */,
 				F312B896D3EC547CB6FC0582 /* Pods_Photoshare.framework */,
 			);
 			name = Frameworks;
@@ -233,6 +240,7 @@
 				CEDDAAEE1DFA525400E6F9E3 /* RegisterViewController.swift in Sources */,
 				CE052C171DF6CD4100205CEA /* ViewController.swift in Sources */,
 				CE052C151DF6CD4100205CEA /* AppDelegate.swift in Sources */,
+				CE6566881DFF04A0007F494F /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
