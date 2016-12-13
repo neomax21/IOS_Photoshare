@@ -80,15 +80,4 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
         return VCarr[nextIndex]
     }
 
-    /*public func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return VCarr.count
-    }
-    
-    public func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        guard let firstViewController = viewControllers?.first, let firstViewControllerIndex = VCarr.index(of: firstViewController) else {
-            return 0
-        }
-        return firstViewControllerIndex
-    }*/
-
 }
