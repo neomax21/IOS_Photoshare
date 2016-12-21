@@ -44,12 +44,21 @@ class RegisterViewController: UIViewController {
                     print(name)
                     self.performSegue(withIdentifier: "AfterRegisterSegue", sender: self)
                 }else{
+                    let alert2 = UIAlertController(title: "Error in registering User", message:
+                        "Please check if Internet connection is active or if you have already registered this e-mail", preferredStyle: UIAlertControllerStyle.alert)
+                    alert2.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
+                    
+                    self.present(alert2, animated: true, completion: nil)
                 }
                 
             })
         }
         else {
+            let alert = UIAlertController(title: "ERROR", message:
+                "Passwords don't match", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
             
+            self.present(alert, animated: true, completion: nil)
         }
     }
 
