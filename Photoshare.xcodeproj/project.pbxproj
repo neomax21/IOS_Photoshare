@@ -13,10 +13,13 @@
 		CE052C1C1DF6CD4100205CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE052C1B1DF6CD4100205CEA /* Assets.xcassets */; };
 		CE052C1F1DF6CD4100205CEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE052C1D1DF6CD4100205CEA /* LaunchScreen.storyboard */; };
 		CE14650C1DF6D16200C3C803 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE14650B1DF6D16200C3C803 /* GoogleService-Info.plist */; };
+		CE2849AF1E12EDEF006462B4 /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = CE2849AE1E12EDEF006462B4 /* Icons */; };
+		CE2849B11E12F150006462B4 /* ChangePWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2849B01E12F150006462B4 /* ChangePWViewController.swift */; };
 		CE6566841DFC8E4E007F494F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6566831DFC8E4E007F494F /* MapKit.framework */; };
 		CE6566881DFF04A0007F494F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6566871DFF04A0007F494F /* PageViewController.swift */; };
 		CEDDAAEC1DFA48EF00E6F9E3 /* Camera and pointer.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDDAAEB1DFA48EF00E6F9E3 /* Camera and pointer.png */; };
 		CEDDAAEE1DFA525400E6F9E3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDAAED1DFA525400E6F9E3 /* RegisterViewController.swift */; };
+		CEFCEA821E12C6D500410FC1 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEA811E12C6D500410FC1 /* OptionsViewController.swift */; };
 		EFC1822FE7E7123ADE9B3B7C /* Pods_Photoshare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F312B896D3EC547CB6FC0582 /* Pods_Photoshare.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,10 +34,13 @@
 		CE052C201DF6CD4100205CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE14650B1DF6D16200C3C803 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE15AA171DF881D700DEEAA3 /* Photoshare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Photoshare.entitlements; sourceTree = "<group>"; };
+		CE2849AE1E12EDEF006462B4 /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = SOURCE_ROOT; };
+		CE2849B01E12F150006462B4 /* ChangePWViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePWViewController.swift; sourceTree = "<group>"; };
 		CE6566831DFC8E4E007F494F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CE6566871DFF04A0007F494F /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		CEDDAAEB1DFA48EF00E6F9E3 /* Camera and pointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Camera and pointer.png"; sourceTree = "<group>"; };
 		CEDDAAED1DFA525400E6F9E3 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CEFCEA811E12C6D500410FC1 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		F312B896D3EC547CB6FC0582 /* Pods_Photoshare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Photoshare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA0C806CAB09B2B8738C75F /* Pods-Photoshare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photoshare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Photoshare/Pods-Photoshare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +88,7 @@
 		CE052C131DF6CD4100205CEA /* Photoshare */ = {
 			isa = PBXGroup;
 			children = (
+				CE2849AE1E12EDEF006462B4 /* Icons */,
 				CE15AA171DF881D700DEEAA3 /* Photoshare.entitlements */,
 				CE052C141DF6CD4100205CEA /* AppDelegate.swift */,
 				CE052C161DF6CD4100205CEA /* ViewController.swift */,
@@ -93,6 +100,8 @@
 				CE14650B1DF6D16200C3C803 /* GoogleService-Info.plist */,
 				CEDDAAED1DFA525400E6F9E3 /* RegisterViewController.swift */,
 				CE6566871DFF04A0007F494F /* PageViewController.swift */,
+				CEFCEA811E12C6D500410FC1 /* OptionsViewController.swift */,
+				CE2849B01E12F150006462B4 /* ChangePWViewController.swift */,
 			);
 			path = Photoshare;
 			sourceTree = "<group>";
@@ -136,7 +145,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Photoshare_Team;
 				TargetAttributes = {
 					CE052C101DF6CD4100205CEA = {
@@ -177,6 +186,7 @@
 				CE052C1F1DF6CD4100205CEA /* LaunchScreen.storyboard in Resources */,
 				CE14650C1DF6D16200C3C803 /* GoogleService-Info.plist in Resources */,
 				CE052C1C1DF6CD4100205CEA /* Assets.xcassets in Resources */,
+				CE2849AF1E12EDEF006462B4 /* Icons in Resources */,
 				CE052C1A1DF6CD4100205CEA /* Main.storyboard in Resources */,
 				CEDDAAEC1DFA48EF00E6F9E3 /* Camera and pointer.png in Resources */,
 			);
@@ -241,6 +251,8 @@
 				CE052C171DF6CD4100205CEA /* ViewController.swift in Sources */,
 				CE052C151DF6CD4100205CEA /* AppDelegate.swift in Sources */,
 				CE6566881DFF04A0007F494F /* PageViewController.swift in Sources */,
+				CEFCEA821E12C6D500410FC1 /* OptionsViewController.swift in Sources */,
+				CE2849B11E12F150006462B4 /* ChangePWViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +296,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -333,6 +346,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
