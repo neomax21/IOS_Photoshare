@@ -40,9 +40,6 @@ class RegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func CancelButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "CancelSegue", sender: self)
-    }
     @IBAction func RegisterButton(_ sender: Any) {
         let name = Name_field.text!
         let email = Email_field.text!

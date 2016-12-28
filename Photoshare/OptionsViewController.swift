@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import FirebaseAuth
 import Firebase
+import FirebaseAuth
 
 class OptionsViewController: UIViewController {
 
@@ -24,8 +24,16 @@ class OptionsViewController: UIViewController {
     }
     
     @IBAction func LogOutButton(_ sender: Any) {
-        try! FIRAuth.auth()!.signOut()
-        self.performSegue(withIdentifier: "LogOutSegue", sender: self)
+        
+        if FIRAuth.auth()?.currentUser != nil {
+            do{
+                try FIRAuth.auth()?.signOut()
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        
+            self.performSegue(withIdentifier: "LogOutSegue", sender: self)
+        }
     }
     
     @IBAction func ChangePWButton(_ sender: Any) {
@@ -39,14 +47,8 @@ class OptionsViewController: UIViewController {
         
         self.present(alert1, animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func unwindToOptionsView(segue: UIStoryboardSegue) {
     }
-    */
 
 }
