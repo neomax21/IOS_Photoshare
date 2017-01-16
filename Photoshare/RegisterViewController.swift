@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 
 class RegisterViewController: UIViewController {
 
@@ -43,14 +44,24 @@ class RegisterViewController: UIViewController {
     @IBAction func RegisterButton(_ sender: Any) {
         let name = Name_field.text!
         let email = Email_field.text!
+        let delimiter = "@"
+        var tmp = email.components(separatedBy: delimiter)
+        let username = tmp[0]
         let pw = PW_field.text!
         let pw_check = PWcheck_field.text!
+        let ref = FIRDatabase.database().reference()
         
         let isEqual = (pw == pw_check)
         if isEqual == true {
             FIRAuth.auth()?.createUser(withEmail: email, password: pw, completion: { (user: FIRUser?, error) in
                 if error == nil {
                     print(name)
+                    // insert user into database
+                    ref.child("Users").child(user!.uid).setValue([
+                        "username" : username,
+                        "name" : name,
+                        "uuid" : FIRAuth.auth()?.currentUser?.uid])
+                    
                     self.performSegue(withIdentifier: "AfterRegisterSegue", sender: self)
                 }else{
                     let alert2 = UIAlertController(title: "Error in registering User", message:
