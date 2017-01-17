@@ -12,6 +12,8 @@
 		CE052C1A1DF6CD4100205CEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE052C181DF6CD4100205CEA /* Main.storyboard */; };
 		CE052C1C1DF6CD4100205CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE052C1B1DF6CD4100205CEA /* Assets.xcassets */; };
 		CE052C1F1DF6CD4100205CEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE052C1D1DF6CD4100205CEA /* LaunchScreen.storyboard */; };
+		CE0626C81E2DA764003CDA43 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0626C71E2DA764003CDA43 /* MapViewController.swift */; };
+		CE0626CA1E2DB13A003CDA43 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0626C91E2DB13A003CDA43 /* icon.png */; };
 		CE14650C1DF6D16200C3C803 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE14650B1DF6D16200C3C803 /* GoogleService-Info.plist */; };
 		CE2540841E2CE9D1009D2640 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2540831E2CE9D1009D2640 /* CameraViewController.swift */; };
 		CE2849B11E12F150006462B4 /* ChangePWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2849B01E12F150006462B4 /* ChangePWViewController.swift */; };
@@ -36,6 +38,8 @@
 		CE052C1B1DF6CD4100205CEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE052C1E1DF6CD4100205CEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE052C201DF6CD4100205CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE0626C71E2DA764003CDA43 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CE0626C91E2DB13A003CDA43 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		CE14650B1DF6D16200C3C803 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE15AA171DF881D700DEEAA3 /* Photoshare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Photoshare.entitlements; sourceTree = "<group>"; };
 		CE2540831E2CE9D1009D2640 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		CE052C131DF6CD4100205CEA /* Photoshare */ = {
 			isa = PBXGroup;
 			children = (
+				CE0626C91E2DB13A003CDA43 /* icon.png */,
 				CEE975B11E1404D6002941C4 /* Back-50.png */,
 				CEE975B21E1404D6002941C4 /* Screenshot-50.png */,
 				CEE975B31E1404D6002941C4 /* Settings Filled-50.png */,
@@ -114,6 +119,7 @@
 				CEFCEA811E12C6D500410FC1 /* OptionsViewController.swift */,
 				CE2849B01E12F150006462B4 /* ChangePWViewController.swift */,
 				CE2540831E2CE9D1009D2640 /* CameraViewController.swift */,
+				CE0626C71E2DA764003CDA43 /* MapViewController.swift */,
 			);
 			path = Photoshare;
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 			files = (
 				CEE975B41E1404D6002941C4 /* Back-50.png in Resources */,
 				CEE975B61E1404D6002941C4 /* Settings Filled-50.png in Resources */,
+				CE0626CA1E2DB13A003CDA43 /* icon.png in Resources */,
 				CE052C1F1DF6CD4100205CEA /* LaunchScreen.storyboard in Resources */,
 				CE14650C1DF6D16200C3C803 /* GoogleService-Info.plist in Resources */,
 				CE052C1C1DF6CD4100205CEA /* Assets.xcassets in Resources */,
@@ -269,6 +276,7 @@
 				CE2540841E2CE9D1009D2640 /* CameraViewController.swift in Sources */,
 				CEFCEA821E12C6D500410FC1 /* OptionsViewController.swift in Sources */,
 				CE2849B11E12F150006462B4 /* ChangePWViewController.swift in Sources */,
+				CE0626C81E2DA764003CDA43 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

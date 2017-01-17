@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
 
-    @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
+    @IBAction func unwindToLoginView(segue: UIStoryboardSegue) {
     }
     
     override func didReceiveMemoryWarning() {

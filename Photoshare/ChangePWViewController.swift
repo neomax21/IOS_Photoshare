@@ -61,28 +61,6 @@ class ChangePWViewController: UIViewController {
                 self.present(alertController, animated: true, completion: nil)
             })
         }
-        
-        
-        /* old stuff
-         if let user = FIRAuth.auth()?.currentUser {
-         print("::[DEBUGGER]:: Authenticated check")
-         //change to new password
-         user.updatePassword(new_pw.text!, completion: { (error) in
-         if let error = error {
-         print("::[DEBUGGER]:: God knows why this failed")
-         print(error.localizedDescription)
-         } else {
-         print("::[DEGUBBER]:: UPDATED successfully")
-         
-         let alert2 = UIAlertController(title: "Password Change", message:
-         "You have successfully changed your Password", preferredStyle: UIAlertControllerStyle.alert)
-         alert2.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
-         
-         self.present(alert2, animated: true, completion: nil)
-         }
-         })
-         }*/
-        // function end
 
     }
 
