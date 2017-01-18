@@ -14,6 +14,7 @@
 		CE052C1F1DF6CD4100205CEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE052C1D1DF6CD4100205CEA /* LaunchScreen.storyboard */; };
 		CE0626C81E2DA764003CDA43 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0626C71E2DA764003CDA43 /* MapViewController.swift */; };
 		CE0626CA1E2DB13A003CDA43 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0626C91E2DB13A003CDA43 /* icon.png */; };
+		CE0626CC1E2EB912003CDA43 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0626CB1E2EB912003CDA43 /* PhotosViewController.swift */; };
 		CE14650C1DF6D16200C3C803 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE14650B1DF6D16200C3C803 /* GoogleService-Info.plist */; };
 		CE2540841E2CE9D1009D2640 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2540831E2CE9D1009D2640 /* CameraViewController.swift */; };
 		CE2849B11E12F150006462B4 /* ChangePWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2849B01E12F150006462B4 /* ChangePWViewController.swift */; };
@@ -40,6 +41,7 @@
 		CE052C201DF6CD4100205CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0626C71E2DA764003CDA43 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CE0626C91E2DB13A003CDA43 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		CE0626CB1E2EB912003CDA43 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		CE14650B1DF6D16200C3C803 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE15AA171DF881D700DEEAA3 /* Photoshare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Photoshare.entitlements; sourceTree = "<group>"; };
 		CE2540831E2CE9D1009D2640 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				CE2849B01E12F150006462B4 /* ChangePWViewController.swift */,
 				CE2540831E2CE9D1009D2640 /* CameraViewController.swift */,
 				CE0626C71E2DA764003CDA43 /* MapViewController.swift */,
+				CE0626CB1E2EB912003CDA43 /* PhotosViewController.swift */,
 			);
 			path = Photoshare;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0626CC1E2EB912003CDA43 /* PhotosViewController.swift in Sources */,
 				CEDDAAEE1DFA525400E6F9E3 /* RegisterViewController.swift in Sources */,
 				CE052C171DF6CD4100205CEA /* ViewController.swift in Sources */,
 				CE052C151DF6CD4100205CEA /* AppDelegate.swift in Sources */,

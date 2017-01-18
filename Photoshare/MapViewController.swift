@@ -12,6 +12,15 @@ import CoreLocation
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
 
+    @IBAction func showPhotosBt(_ sender: Any) {
+        self.performSegue(withIdentifier: "showPhotosViewSegue", sender: self)
+        // debugger console
+        print("::[DEBUGGER]:: HIT REGISTER BUTTON")
+    }
+    
+    @IBAction func unwindToMapViewSegue(segue: UIStoryboardSegue) {
+    }
+    
     @IBOutlet weak var map: MKMapView!
     
     let manager = CLLocationManager()
@@ -22,9 +31,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
         
         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        
-        //self.currentLocation = myLocation
-        
+
         let region:MKCoordinateRegion = MKCoordinateRegion(center: myLocation, span: span)
     
         map.setRegion(region, animated: true)

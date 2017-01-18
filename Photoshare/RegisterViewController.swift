@@ -82,8 +82,7 @@ class RegisterViewController: UIViewController {
                     // insert user into database
                     ref.child("Users").child(user!.uid).setValue([
                         "username" : username,
-                        "name" : name,
-                        "uuid" : FIRAuth.auth()?.currentUser?.uid])
+                        "name" : name])
                     
                     self.performSegue(withIdentifier: "AfterRegisterSegue", sender: self)
                 }else{

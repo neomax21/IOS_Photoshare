@@ -8,8 +8,13 @@
 
 import UIKit
 import AVFoundation
+import FirebaseStorage
+import FirebaseDatabase
+import FirebaseAuth
+import Firebase
+import CoreLocation
 
-class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
 
     var captureSession : AVCaptureSession?
     var stillImageOutput : AVCaptureStillImageOutput?
@@ -19,12 +24,63 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     // dynamic buttons
     @IBOutlet var shareBt: UIButton!
     @IBOutlet var discardBt: UIButton!
+    @IBOutlet var backBt: UIButton!
 
+    // foto tirada
+    var photoTaken: Data!
+    // referencias da storage da firebase e database
+    let dbRef = FIRDatabase.database().reference()
+    let storageRef = FIRStorage.storage().reference()
+    
+    // referencia para o manager da localizacao
+    let manager = CLLocationManager()
+    var currentLocation:CLLocationCoordinate2D!
+
+    let path = "/photos/"
+    
 
     @IBAction func shareBt(_ sender: Any) {
-        print("BOA CAMPEAO")
+        let storImgRef = storageRef.child(path)
+        let uuid = UUID().uuidString
+        let storImgRefFinal = storImgRef.child(uuid+".jpg")
+        
+        storImgRefFinal.put(self.photoTaken, metadata: nil) { (metadata, error) in
+            guard metadata != nil else {
+                return
+            }
+
+            // adding info to database
+            self.dbRef.child("Photos").child(uuid).setValue([
+                "user" : FIRAuth.auth()?.currentUser?.email ?? "ERROR",
+                "latitude" : self.currentLocation.latitude,
+                "longitude" : self.currentLocation.longitude])
+        }
+        
+        self.shareBt.isHidden = true
+        self.discardBt.isHidden = true
+        self.backBt.isHidden = false
     }
+    
     @IBAction func discardBt(_ sender: Any) {
+        tempImageView.isHidden = true
+        self.discardBt.isHidden = true
+        self.shareBt.isHidden = true
+        self.backBt.isHidden = true
+        didTakePhoto = false
+    }
+    
+    @IBAction func backBt(_ sender: Any) {
+        tempImageView.isHidden = true
+        self.discardBt.isHidden = true
+        self.shareBt.isHidden = true
+        self.backBt.isHidden = true
+        didTakePhoto = false
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[0]
+        
+        self.currentLocation = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
     }
     
     override func viewDidLoad() {
@@ -33,6 +89,13 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         // hide dynamic buttons
         discardBt.isHidden = true
         shareBt.isHidden = true
+        backBt.isHidden = true
+        
+        //start updating location
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
         // Do any additional setup after loading the view.
     }
 
@@ -86,6 +149,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
                 (sampleBuffer, error) in
                 if sampleBuffer != nil {
                     let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
+                    self.photoTaken = imageData
                     
                     let dataProvider  = CGDataProvider(data: imageData as! CFData)
                     let cgImageRef = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: .defaultIntent)
@@ -107,10 +171,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func didPressTakeAnother(){
         if didTakePhoto == true{
-            tempImageView.isHidden = true
-            self.discardBt.isHidden = true
-            self.shareBt.isHidden = true
-            didTakePhoto = false
+            print("::[DEBUGGER]:: PHOTO TAKEN SUCCESSFULLY")
         }
         else{
             captureSession?.startRunning()

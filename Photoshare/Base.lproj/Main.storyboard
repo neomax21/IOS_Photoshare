@@ -301,14 +301,24 @@
                                 </constraints>
                             </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fXP-FP-YES">
-                                <rect key="frame" x="16" y="89" width="288" height="170"/>
+                                <rect key="frame" x="16" y="89" width="288" height="276"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oA-g8-Trd">
+                                <rect key="frame" x="16" y="447" width="288" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Show Photos"/>
+                                <connections>
+                                    <action selector="showPhotosBt:" destination="aZT-de-S2Z" eventType="touchUpInside" id="9q8-0l-0VV"/>
+                                    <segue destination="5Hz-kx-5MO" kind="show" identifier="showPhotosViewSegue" id="liB-w8-iMr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1188814119" green="0.55111604930000002" blue="0.1185893491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uLO-JL-whT" firstAttribute="leading" secondItem="fXP-FP-YES" secondAttribute="leading" id="4Ms-AD-Oap"/>
                             <constraint firstItem="uLO-JL-whT" firstAttribute="top" secondItem="VcI-BM-hAY" secondAttribute="bottom" constant="8" symbolic="YES" id="5Eb-aG-wrP"/>
-                            <constraint firstItem="Jch-42-k3T" firstAttribute="top" secondItem="fXP-FP-YES" secondAttribute="bottom" constant="309" id="6RO-Oe-Lx7"/>
+                            <constraint firstItem="Jch-42-k3T" firstAttribute="top" secondItem="fXP-FP-YES" secondAttribute="bottom" constant="203" id="6RO-Oe-Lx7"/>
                             <constraint firstItem="uLO-JL-whT" firstAttribute="top" secondItem="6zt-E5-6d6" secondAttribute="top" id="6ip-WN-hkn"/>
                             <constraint firstItem="uLO-JL-whT" firstAttribute="bottom" secondItem="6zt-E5-6d6" secondAttribute="bottom" id="AWr-mA-CQI"/>
                             <constraint firstItem="uLO-JL-whT" firstAttribute="leading" secondItem="LCS-VF-cHG" secondAttribute="leadingMargin" id="cgt-zF-jBn"/>
@@ -324,6 +334,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDm-ls-QpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="16.875" y="965.49295774647885"/>
+        </scene>
+        <!--ViewPhoto-->
+        <scene sceneID="KM6-K7-Kqs">
+            <objects>
+                <viewController title="ViewPhoto" id="5Hz-kx-5MO" customClass="PhotosViewController" customModule="Photoshare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zFy-V9-Lho"/>
+                        <viewControllerLayoutGuide type="bottom" id="RxG-b6-gyv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x0p-Sb-Sb2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqq-GA-KIE">
+                                <rect key="frame" x="274" y="28" width="30" height="30"/>
+                                <state key="normal" title="Exit"/>
+                                <connections>
+                                    <segue destination="LIi-Bo-kOc" kind="unwind" unwindAction="unwindToMapViewSegueWithSegue:" id="UgT-mP-s0D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xp-2N-QwV">
+                                <rect key="frame" x="16" y="498" width="288" height="30"/>
+                                <state key="normal" title="Next Photo"/>
+                                <connections>
+                                    <action selector="nextPhoto:" destination="5Hz-kx-5MO" eventType="touchUpInside" id="Ngj-63-SdZ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WKz-C1-ajJ">
+                                <rect key="frame" x="40" y="66" width="240" height="424"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1188814119" green="0.55111604930000002" blue="0.1185893491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9xp-2N-QwV" firstAttribute="leading" secondItem="x0p-Sb-Sb2" secondAttribute="leadingMargin" id="9yC-By-G2N"/>
+                            <constraint firstItem="WKz-C1-ajJ" firstAttribute="top" secondItem="Bqq-GA-KIE" secondAttribute="bottom" constant="8" symbolic="YES" id="Arv-KM-2PN"/>
+                            <constraint firstItem="Bqq-GA-KIE" firstAttribute="trailing" secondItem="x0p-Sb-Sb2" secondAttribute="trailingMargin" id="Mig-oC-cag"/>
+                            <constraint firstItem="Bqq-GA-KIE" firstAttribute="trailing" secondItem="9xp-2N-QwV" secondAttribute="trailing" id="T7m-C6-9IS"/>
+                            <constraint firstItem="RxG-b6-gyv" firstAttribute="top" secondItem="9xp-2N-QwV" secondAttribute="bottom" constant="40" id="XAK-pz-0w2"/>
+                            <constraint firstItem="Bqq-GA-KIE" firstAttribute="top" secondItem="zFy-V9-Lho" secondAttribute="bottom" constant="8" symbolic="YES" id="bCL-lo-fAh"/>
+                            <constraint firstItem="9xp-2N-QwV" firstAttribute="top" secondItem="WKz-C1-ajJ" secondAttribute="bottom" constant="8" symbolic="YES" id="c7l-a2-z1V"/>
+                            <constraint firstItem="WKz-C1-ajJ" firstAttribute="leading" secondItem="x0p-Sb-Sb2" secondAttribute="leadingMargin" constant="24" id="lH5-Uc-ZHw"/>
+                            <constraint firstItem="WKz-C1-ajJ" firstAttribute="centerX" secondItem="9xp-2N-QwV" secondAttribute="centerX" id="rHA-PN-8kF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentPhoto" destination="WKz-C1-ajJ" id="8pD-FB-ycT"/>
+                        <outlet property="imageView" destination="WKz-C1-ajJ" id="MSM-CS-WZe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KYJ-MH-yyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="LIi-Bo-kOc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="16.875" y="1673.2394366197184"/>
         </scene>
         <!--CameraView-->
         <scene sceneID="Jwl-8h-19E">
@@ -370,25 +433,39 @@
                                     <action selector="discardBt:" destination="mOP-BB-7ka" eventType="touchUpInside" id="Fhv-Yc-kL0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1T-p1-IPS">
+                                <rect key="frame" x="137" y="518" width="46" height="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBt:" destination="mOP-BB-7ka" eventType="touchUpInside" id="1qW-Fe-QTb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1188814119" green="0.55111604930000002" blue="0.1185893491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OA0-0B-IOB" firstAttribute="top" secondItem="ncK-mr-nEP" secondAttribute="top" identifier="id6" id="30Y-r8-rZ2"/>
                             <constraint firstItem="NZb-Lf-5G3" firstAttribute="bottom" secondItem="kqS-bB-hhZ" secondAttribute="top" id="8e3-fj-v0k"/>
+                            <constraint firstItem="vQy-yI-XFM" firstAttribute="leading" secondItem="N1T-p1-IPS" secondAttribute="trailing" constant="57" id="8y7-Wr-0Yi"/>
                             <constraint firstItem="vQy-yI-XFM" firstAttribute="trailing" secondItem="ncK-mr-nEP" secondAttribute="trailingMargin" id="Hnv-jV-6hy"/>
                             <constraint firstItem="OA0-0B-IOB" firstAttribute="leading" secondItem="ncK-mr-nEP" secondAttribute="leading" identifier="id7" id="Md5-pV-rTx"/>
                             <constraint firstItem="ZqH-pQ-h7j" firstAttribute="leading" secondItem="ncK-mr-nEP" secondAttribute="leadingMargin" identifier="id10" id="Q6b-uX-Ych"/>
                             <constraint firstAttribute="trailing" secondItem="OA0-0B-IOB" secondAttribute="trailing" identifier="id8" id="S6J-4g-EdO"/>
                             <constraint firstAttribute="bottom" secondItem="ZqH-pQ-h7j" secondAttribute="bottom" constant="20" symbolic="YES" identifier="id11" id="U5f-dI-o8b"/>
+                            <constraint firstItem="N1T-p1-IPS" firstAttribute="centerX" secondItem="NZb-Lf-5G3" secondAttribute="centerX" id="Ufs-wh-CCt"/>
                             <constraint firstItem="NZb-Lf-5G3" firstAttribute="centerX" secondItem="ncK-mr-nEP" secondAttribute="centerX" identifier="id3" id="bTc-Ls-X9E"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NZb-Lf-5G3" secondAttribute="trailing" constant="-16" identifier="id4" id="fYC-yf-pLx"/>
                             <constraint firstItem="NZb-Lf-5G3" firstAttribute="top" secondItem="OA0-0B-IOB" secondAttribute="top" id="ijx-Hh-UUJ"/>
                             <constraint firstItem="OA0-0B-IOB" firstAttribute="bottom" secondItem="kqS-bB-hhZ" secondAttribute="top" identifier="id9" id="jkE-x0-NK1"/>
                             <constraint firstItem="NZb-Lf-5G3" firstAttribute="leading" secondItem="ncK-mr-nEP" secondAttribute="leadingMargin" constant="-16" identifier="id5" id="lmv-YI-eg6"/>
                             <constraint firstItem="ZqH-pQ-h7j" firstAttribute="baseline" secondItem="vQy-yI-XFM" secondAttribute="baseline" identifier="id12" id="neV-i3-jw5"/>
+                            <constraint firstItem="N1T-p1-IPS" firstAttribute="baseline" secondItem="ZqH-pQ-h7j" secondAttribute="baseline" id="zHg-kB-vIq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backBt" destination="N1T-p1-IPS" id="83j-20-UyY"/>
                         <outlet property="cameraView" destination="OA0-0B-IOB" id="lsu-eP-vPD"/>
                         <outlet property="discardBt" destination="vQy-yI-XFM" id="nYn-TR-cym"/>
                         <outlet property="shareBt" destination="ZqH-pQ-h7j" id="OWK-qn-2U0"/>
