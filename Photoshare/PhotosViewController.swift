@@ -16,10 +16,15 @@ class PhotosViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet var currentPhoto: UIImageView!
     
+    @IBOutlet var userLabel: UILabel!
+    @IBOutlet var noPhotoLabel: UILabel!
+    
     let dbRef = FIRDatabase.database().reference()
     let storRef = FIRStorage.storage().reference().child("photos/")
     
+    var currentPos = 0
     var tmpImgArray:[String] = []
+    var tmpUsrArray:[String] = []
     let manager = CLLocationManager()
     var currentLocation:CLLocation!
     var tmpLoc:CLLocation!
@@ -45,14 +50,15 @@ class PhotosViewController: UIViewController, CLLocationManagerDelegate {
             for rest in snapshot.children.allObjects as! [FIRDataSnapshot] {
 
                 // obter dados de cada foto
-                var usr = rest.childSnapshot(forPath: "user")
+                let usr = rest.childSnapshot(forPath: "user")
                 let lat = rest.childSnapshot(forPath: "latitude")
                 let long = rest.childSnapshot(forPath: "longitude")
                 
                 self.tmpLoc = CLLocation(latitude: lat.value.unsafelyUnwrapped as! CLLocationDegrees, longitude: long.value.unsafelyUnwrapped as! CLLocationDegrees)
                 
-                if self.currentLocation.distance(from: self.tmpLoc) < 200 {
+                if self.currentLocation.distance(from: self.tmpLoc) < 300 {
                     self.tmpImgArray.append(rest.key)
+                    self.tmpUsrArray.append(usr.value.unsafelyUnwrapped as! String)
                     print(rest.key)
                     print(self.tmpImgArray.count)
                 }
@@ -62,17 +68,32 @@ class PhotosViewController: UIViewController, CLLocationManagerDelegate {
     
     func setImage() {
         // after selecting images, choose one randomly and apply to imageVIEW
-        let pos = Int(arc4random_uniform(UInt32(tmpImgArray.count)))
-        let storIMG = self.storRef.child(tmpImgArray[pos]+".jpg")
         
-        storIMG.data(withMaxSize: 1 * 1920 * 1080) { data, error in
-            if error != nil {
-                // Uh-oh, an error occurred!
-            } else {
-                // Data for "images/island.jpg" is returned
-                self.imageView.image = UIImage(data: data!)
+        if tmpImgArray.count == 0 {
+            userLabel.isHidden = true
+            noPhotoLabel.isHidden = false
+            currentPhoto.isHidden = true
+        } else {
+            userLabel.isHidden = false
+            noPhotoLabel.isHidden = true
+            currentPhoto.isHidden = false
+            if currentPos >= tmpImgArray.count {
+                currentPos = 0
             }
-        }
+            userLabel.text = tmpUsrArray[currentPos]
+            let storIMG = self.storRef.child(tmpImgArray[currentPos]+".jpg")
+            currentPos += 1
+        
+            storIMG.data(withMaxSize: 1 * 1920 * 1080) { data, error in
+                if error != nil {
+                    // Uh-oh, an error occurred!
+                } else {
+                    // Data for "images/island.jpg" is returned
+                    self.imageView.image = UIImage(data: data!)
+                }
+            }
+        }//else
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

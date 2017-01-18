@@ -113,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-825" y="197.53521126760563"/>
+            <point key="canvasLocation" x="-971" y="-302"/>
         </scene>
         <!--PageViewController-->
         <scene sceneID="sDa-yn-dIr">
@@ -121,7 +121,7 @@
                 <pageViewController storyboardIdentifier="PageView" autoresizesArchivedViewToFullSize="NO" title="PageViewController" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="6d6-d9-qn1" customClass="PageViewController" customModule="Photoshare" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1at-SA-W0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913" y="299"/>
+            <point key="canvasLocation" x="-945" y="539"/>
         </scene>
         <!--OptionsView-->
         <scene sceneID="lxc-Fs-FmG">
@@ -189,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8I-89-kBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802" y="967"/>
+            <point key="canvasLocation" x="-1746" y="198"/>
         </scene>
         <!--ChangePW View Controller-->
         <scene sceneID="RhP-lQ-uNu">
@@ -273,7 +273,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k2j-aB-pot" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ud0-By-NFg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="966.54929577464793"/>
+            <point key="canvasLocation" x="-1748" y="957"/>
         </scene>
         <!--MapView-->
         <scene sceneID="Mcd-Sf-XNm">
@@ -333,7 +333,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDm-ls-QpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16.875" y="965.49295774647885"/>
+            <point key="canvasLocation" x="-2361" y="198"/>
         </scene>
         <!--ViewPhoto-->
         <scene sceneID="KM6-K7-Kqs">
@@ -364,29 +364,52 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WKz-C1-ajJ">
                                 <rect key="frame" x="40" y="66" width="240" height="424"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Photos Available In Your Surroundings" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEw-cN-Qgr">
+                                <rect key="frame" x="16" y="255" width="288" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Mce-IH-751"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zrq-u4-5e0">
+                                <rect key="frame" x="40" y="43.5" width="240" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1188814119" green="0.55111604930000002" blue="0.1185893491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="9xp-2N-QwV" firstAttribute="leading" secondItem="x0p-Sb-Sb2" secondAttribute="leadingMargin" id="9yC-By-G2N"/>
-                            <constraint firstItem="WKz-C1-ajJ" firstAttribute="top" secondItem="Bqq-GA-KIE" secondAttribute="bottom" constant="8" symbolic="YES" id="Arv-KM-2PN"/>
-                            <constraint firstItem="Bqq-GA-KIE" firstAttribute="trailing" secondItem="x0p-Sb-Sb2" secondAttribute="trailingMargin" id="Mig-oC-cag"/>
-                            <constraint firstItem="Bqq-GA-KIE" firstAttribute="trailing" secondItem="9xp-2N-QwV" secondAttribute="trailing" id="T7m-C6-9IS"/>
-                            <constraint firstItem="RxG-b6-gyv" firstAttribute="top" secondItem="9xp-2N-QwV" secondAttribute="bottom" constant="40" id="XAK-pz-0w2"/>
-                            <constraint firstItem="Bqq-GA-KIE" firstAttribute="top" secondItem="zFy-V9-Lho" secondAttribute="bottom" constant="8" symbolic="YES" id="bCL-lo-fAh"/>
-                            <constraint firstItem="9xp-2N-QwV" firstAttribute="top" secondItem="WKz-C1-ajJ" secondAttribute="bottom" constant="8" symbolic="YES" id="c7l-a2-z1V"/>
-                            <constraint firstItem="WKz-C1-ajJ" firstAttribute="leading" secondItem="x0p-Sb-Sb2" secondAttribute="leadingMargin" constant="24" id="lH5-Uc-ZHw"/>
-                            <constraint firstItem="WKz-C1-ajJ" firstAttribute="centerX" secondItem="9xp-2N-QwV" secondAttribute="centerX" id="rHA-PN-8kF"/>
+                            <constraint firstItem="Bqq-GA-KIE" firstAttribute="trailing" secondItem="uEw-cN-Qgr" secondAttribute="trailing" id="5V4-34-5wU"/>
+                            <constraint firstItem="Bqq-GA-KIE" firstAttribute="top" secondItem="zFy-V9-Lho" secondAttribute="bottom" constant="8" symbolic="YES" id="DCU-CC-Wu3"/>
+                            <constraint firstItem="uEw-cN-Qgr" firstAttribute="trailing" secondItem="9xp-2N-QwV" secondAttribute="trailing" id="G9F-sK-d16"/>
+                            <constraint firstItem="Bqq-GA-KIE" firstAttribute="trailing" secondItem="x0p-Sb-Sb2" secondAttribute="trailingMargin" id="Pxi-vJ-4D3"/>
+                            <constraint firstItem="Zrq-u4-5e0" firstAttribute="leading" secondItem="WKz-C1-ajJ" secondAttribute="leading" id="WY0-K8-4hY"/>
+                            <constraint firstItem="uEw-cN-Qgr" firstAttribute="centerY" secondItem="WKz-C1-ajJ" secondAttribute="centerY" id="aGu-Q9-Esb"/>
+                            <constraint firstItem="uEw-cN-Qgr" firstAttribute="leading" secondItem="9xp-2N-QwV" secondAttribute="leading" id="bpA-Vv-QdG"/>
+                            <constraint firstItem="WKz-C1-ajJ" firstAttribute="top" secondItem="Zrq-u4-5e0" secondAttribute="bottom" constant="8" symbolic="YES" id="bzN-kw-8AA"/>
+                            <constraint firstItem="Zrq-u4-5e0" firstAttribute="leading" secondItem="x0p-Sb-Sb2" secondAttribute="leadingMargin" constant="24" id="dSP-ai-U8W"/>
+                            <constraint firstItem="uEw-cN-Qgr" firstAttribute="leading" secondItem="x0p-Sb-Sb2" secondAttribute="leadingMargin" id="gqm-sH-ih5"/>
+                            <constraint firstItem="9xp-2N-QwV" firstAttribute="top" secondItem="WKz-C1-ajJ" secondAttribute="bottom" constant="8" symbolic="YES" id="iPe-9V-kC8"/>
+                            <constraint firstItem="Zrq-u4-5e0" firstAttribute="trailing" secondItem="WKz-C1-ajJ" secondAttribute="trailing" id="mzp-qh-gjb"/>
+                            <constraint firstItem="RxG-b6-gyv" firstAttribute="top" secondItem="9xp-2N-QwV" secondAttribute="bottom" constant="40" id="nde-ky-s8d"/>
+                            <constraint firstItem="WKz-C1-ajJ" firstAttribute="top" secondItem="Bqq-GA-KIE" secondAttribute="bottom" constant="8" symbolic="YES" id="vXe-t2-9zL"/>
+                            <constraint firstItem="Zrq-u4-5e0" firstAttribute="centerX" secondItem="uEw-cN-Qgr" secondAttribute="centerX" id="x3c-iQ-r67"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="currentPhoto" destination="WKz-C1-ajJ" id="8pD-FB-ycT"/>
                         <outlet property="imageView" destination="WKz-C1-ajJ" id="MSM-CS-WZe"/>
+                        <outlet property="noPhotoLabel" destination="uEw-cN-Qgr" id="dNE-cv-Mxa"/>
+                        <outlet property="userLabel" destination="Zrq-u4-5e0" id="d7J-8M-3S8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYJ-MH-yyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="LIi-Bo-kOc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="16.875" y="1673.2394366197184"/>
+            <point key="canvasLocation" x="-2363" y="956"/>
         </scene>
         <!--CameraView-->
         <scene sceneID="Jwl-8h-19E">
@@ -474,7 +497,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJN-QP-bmZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-759.375" y="966.54929577464793"/>
+            <point key="canvasLocation" x="-2985" y="198"/>
         </scene>
         <!--RegisterView-->
         <scene sceneID="OOR-KL-EeO">
@@ -600,7 +623,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfA-MG-Tha" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="zbE-jk-Xkc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="17" y="-88"/>
+            <point key="canvasLocation" x="-169" y="-86"/>
         </scene>
     </scenes>
     <resources>
